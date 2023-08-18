@@ -4,6 +4,7 @@ import Logo from '../../assets/images/logo-avatar.png';
 import LogoName from '../../assets/images/logo-name.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () => {
   return (
@@ -33,6 +34,26 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faEnvelope} />
         </NavLink>
       </nav>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/jock-dalby-5986474a/"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/jock-dalby"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
