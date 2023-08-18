@@ -1,4 +1,4 @@
-import './index.scss';
+import './Sidebar.scss';
 import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/logo-avatar.png';
 import LogoName from '../../assets/images/logo-name.png';
