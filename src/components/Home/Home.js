@@ -2,6 +2,7 @@ import './Home.scss';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import Logo from './Logo/Logo';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -60,6 +61,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   );
 };
