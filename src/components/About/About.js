@@ -8,8 +8,9 @@ const About = () => {
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, 4000);
+    }, 3000);
   });
+
   return (
     <div className="container about-page">
       <div className="text-zone">
