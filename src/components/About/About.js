@@ -1,25 +1,12 @@
 import './About.scss';
-import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 
 const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 3000);
-  });
-
   return (
     <div className="container about-page">
       <div className="text-zone">
         <h1>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-            idx={15}
-          />
+          <AnimatedLetters delay={3000} str={'About me'} idx={15} />
         </h1>
         <p>
           I'm a very ambitious front-end developer looking for a role in an
