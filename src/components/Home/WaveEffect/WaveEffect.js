@@ -3,12 +3,11 @@ import gsap from 'gsap-trial';
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
 import './WaveEffect.scss';
 
-const Logo = () => {
+const WaveEffect = () => {
   useEffect(() => {
     gsap.registerPlugin(DrawSVGPlugin);
 
     let i = 0;
-    console.log('jco', i);
 
     gsap.set('.line', {
       attr: {
@@ -48,7 +47,7 @@ const Logo = () => {
   }, []);
 
   return (
-    <div className="logo-container">
+    <div className="wave-effect-container">
       <svg
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -176,4 +175,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default WaveEffect;
