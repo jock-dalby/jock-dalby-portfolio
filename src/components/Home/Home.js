@@ -4,10 +4,9 @@ import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import WaveEffect from './WaveEffect/WaveEffect';
 
 const STRINGS = ['Hi,', `I'm Jock,`, 'web developer.'];
-const START_IDX = 10;
 
 const getStartingIdx = (strIdx) => {
-  let idx = START_IDX;
+  let idx = 10; // 1 sec;
   for (let i = 0; i < strIdx; i++) {
     idx += STRINGS[i].length;
   }
