@@ -1,5 +1,14 @@
 @import '../../variables.scss';
 
+h1 {
+  color: #fff;
+  line-height: 53px;
+  font-size: 60px;
+  margin: 0;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+}
+
 .text-animate {
   display: inline-block;
   opacity: 0;
