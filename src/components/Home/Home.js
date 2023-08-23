@@ -17,18 +17,16 @@ const Home = () => {
   return (
     <div className="container home-page">
       <div className="text-zone">
-        <h1>
-          {STRINGS.map((str, strIdx) => (
-            <span key={strIdx}>
-              <AnimatedLetters
-                delay={4000}
-                str={str}
-                idx={getStartingIdx(strIdx)}
-              />
-              {strIdx !== STRINGS.length - 1 && <br />}
-            </span>
-          ))}
-        </h1>
+        {STRINGS.map((str, strIdx) => (
+          <span key={strIdx}>
+            <AnimatedLetters
+              delay={4000}
+              str={str}
+              idx={getStartingIdx(strIdx)}
+            />
+            {strIdx !== STRINGS.length - 1 && <br />}
+          </span>
+        ))}
         <h2>Frontend Developer / Javascript Expert</h2>
         <Link to="/contact" className="flat-button">
           CONTACT ME

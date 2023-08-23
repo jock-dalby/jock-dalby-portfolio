@@ -11,13 +11,13 @@ const AnimatedLetters = ({ delay, str, idx }) => {
   });
 
   return (
-    <span>
+    <h1>
       {str.split('').map((char, i) => (
         <span key={char + i} className={`${letterClass} _${i + idx}`}>
           {char}
         </span>
       ))}
-    </span>
+    </h1>
   );
 };
 
