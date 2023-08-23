@@ -1,10 +1,35 @@
 import './Contact.scss';
 
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 import { Loader } from 'react-loaders';
 
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_3g28b5b',
+        'template_ehrjuvx',
+        form.current,
+        '4KNt4MVOkHt1tYcho'
+      )
+      .then(
+        () => {
+          alert('Message successfully sent!');
+          window.location.reload(false);
+        },
+        () => {
+          alert('Failed to send the message, please try again');
+        }
+      );
+  };
+
   return (
     <>
       <div className="container contact-page">
@@ -16,7 +41,7 @@ const Contact = () => {
             questions, don't hesitate to contact me using below form either.
           </p>
           <div className="contact-form">
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
                   <input type="text" name="name" placeholder="Name" required />
