@@ -1,5 +1,7 @@
 import './Home.scss';
 import { Link } from 'react-router-dom';
+import { Loader } from 'react-loaders';
+
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import WaveEffect from './WaveEffect/WaveEffect';
 
@@ -15,27 +17,30 @@ const getStartingIdx = (strIdx) => {
 
 const Home = () => {
   return (
-    <div className="container home-page">
-      <div className="text-zone">
-        <div className="title-letters">
-          {STRINGS.map((str, strIdx) => (
-            <span key={strIdx}>
-              <AnimatedLetters
-                delay={4000}
-                str={str}
-                idx={getStartingIdx(strIdx)}
-              />
-              {strIdx !== STRINGS.length - 1 && <br />}
-            </span>
-          ))}
+    <>
+      <div className="container home-page">
+        <div className="text-zone">
+          <div className="title-letters">
+            {STRINGS.map((str, strIdx) => (
+              <span key={strIdx}>
+                <AnimatedLetters
+                  delay={4000}
+                  str={str}
+                  idx={getStartingIdx(strIdx)}
+                />
+                {strIdx !== STRINGS.length - 1 && <br />}
+              </span>
+            ))}
+          </div>
+          <h2>Frontend Developer / Javascript Expert</h2>
+          <Link to="/contact" className="flat-button">
+            CONTACT ME
+          </Link>
         </div>
-        <h2>Frontend Developer / Javascript Expert</h2>
-        <Link to="/contact" className="flat-button">
-          CONTACT ME
-        </Link>
+        <WaveEffect />
       </div>
-      <WaveEffect />
-    </div>
+      <Loader type="pacman" />
+    </>
   );
 };
 
