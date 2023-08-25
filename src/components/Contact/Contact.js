@@ -1,6 +1,7 @@
 import './Contact.scss';
 
 import emailjs from '@emailjs/browser';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useRef } from 'react';
 import { Loader } from 'react-loaders';
 
@@ -71,6 +72,24 @@ const Contact = () => {
               </ul>
             </form>
           </div>
+        </div>
+        <div className="info-map">
+          Jock Dalby,
+          <br />
+          Gold Coast,
+          <br />
+          Australia
+          <br />
+          <br />
+          <span>jockdalby86@gmail.com</span>
+        </div>
+        <div className="map-wrap">
+          <MapContainer center={[-28.0677, 153.3974]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[-28.0677, 153.3974]}>
+              <Popup>Jock lives here, please reach out for a coffee :)</Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
       <Loader type="pacman" />
