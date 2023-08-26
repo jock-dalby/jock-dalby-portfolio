@@ -38,10 +38,10 @@
   input[type='email'] {
     width: 100%;
     border: 0;
-    background: #115173;
+    background: $background-blue;
     height: 50px;
     font-size: 16px;
-    color: #fff;
+    color: $white;
     padding: 0 20px;
     box-sizing: border-box;
   }
@@ -49,10 +49,10 @@
   textarea {
     width: 100%;
     border: 0;
-    background: #115173;
+    background: $background-blue;
     height: 50px;
     font-size: 16px;
-    color: #fff;
+    color: $white;
     padding: 20px;
     box-sizing: border-box;
     min-height: 150px;
@@ -64,7 +64,7 @@
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #ffd700;
+    border: 1px solid $primary-color;
     float: left;
     border-radius: 4px;
     background: 0 0;
@@ -94,13 +94,13 @@
 
 .info-map {
   position: absolute;
-  background: #000;
+  background: $black;
   top: 50px;
   right: 30%;
   z-index: 999999;
   width: 267px;
   padding: 20px;
-  color: #fff;
+  color: $white;
   font-family: 'Helvetica';
   font-size: 17px;
   font-weight: 300;

@@ -55,7 +55,7 @@
 
   .text-animate-hover {
     &:hover {
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -97,7 +97,7 @@
 
   p {
     font-size: 13px;
-    color: #fff;
+    color: $white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     min-width: fit-content;
