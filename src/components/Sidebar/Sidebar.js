@@ -24,6 +24,17 @@ const NAV_LINKS = [
   },
 ];
 
+const SOCIAL_LINKS = [
+  {
+    href: 'https://www.linkedin.com/in/jock-dalby-5986474a/',
+    icon: faLinkedin,
+  },
+  {
+    href: 'https://github.com/jock-dalby',
+    icon: faGithub,
+  },
+];
+
 const Sidebar = () => {
   return (
     <div className="nav-bar">
@@ -44,24 +55,13 @@ const Sidebar = () => {
         ))}
       </nav>
       <ul>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/jock-dalby-5986474a/"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/jock-dalby"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </li>
+        {SOCIAL_LINKS.map(({ href, icon }) => (
+          <li>
+            <a target="_blank" rel="noreferrer" href={href}>
+              <FontAwesomeIcon icon={icon} />
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
