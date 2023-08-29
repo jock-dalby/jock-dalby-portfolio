@@ -6,6 +6,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+const NAV_LINKS = [
+  {
+    to: '/',
+    className: 'home-link',
+    icon: faHome,
+  },
+  {
+    to: '/about',
+    className: 'about-link',
+    icon: faUser,
+  },
+  {
+    to: '/contact',
+    className: 'contact-link',
+    icon: faEnvelope,
+  },
+];
+
 const Sidebar = () => {
   return (
     <div className="nav-bar">
@@ -14,25 +32,16 @@ const Sidebar = () => {
         <img className="logo-name" src={LogoName} alt="jock" />
       </Link>
       <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
-          <FontAwesomeIcon icon={faHome} />
-        </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          className="about-link"
-          to="/about"
-        >
-          <FontAwesomeIcon icon={faUser} />
-        </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          className="contact-link"
-          to="/contact"
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-        </NavLink>
+        {NAV_LINKS.map(({ to, className, icon }) => (
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className={className}
+            to={to}
+          >
+            <FontAwesomeIcon icon={icon} />
+          </NavLink>
+        ))}
       </nav>
       <ul>
         <li>
