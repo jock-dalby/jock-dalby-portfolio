@@ -1,4 +1,3 @@
-import './About.scss';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import SkillsCube from './SkillsCube/SkillsCube';
 import { Loader } from 'react-loaders';
