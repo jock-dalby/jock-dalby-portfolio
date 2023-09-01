@@ -41,7 +41,7 @@ const SkillsCube = () => (
     <div className="cube-spinner">
       {CUBE_FACES.map(({ icon, color }, i) => {
         return (
-          <div className={`face${i + 1}`}>
+          <div className={`face${i + 1}`} key={i}>
             <FontAwesomeIcon icon={icon} color={color} />
           </div>
         );

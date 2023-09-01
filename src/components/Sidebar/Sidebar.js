@@ -43,8 +43,9 @@ const Sidebar = () => {
         <img className="logo-name" src={LogoName} alt="jock" />
       </Link>
       <nav>
-        {NAV_LINKS.map(({ to, className, icon }) => (
+        {NAV_LINKS.map(({ to, className, icon }, i) => (
           <NavLink
+            key={i}
             exact="true"
             activeclassname="active"
             className={className}
@@ -55,8 +56,8 @@ const Sidebar = () => {
         ))}
       </nav>
       <ul>
-        {SOCIAL_LINKS.map(({ href, icon }) => (
-          <li>
+        {SOCIAL_LINKS.map(({ href, icon }, i) => (
+          <li key={i}>
             <a target="_blank" rel="noreferrer" href={href}>
               <FontAwesomeIcon icon={icon} />
             </a>
