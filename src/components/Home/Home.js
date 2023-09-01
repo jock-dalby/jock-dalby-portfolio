@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Loader } from 'react-loaders';
 
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
-import WaveEffect from './WaveEffect/WaveEffect';
 
 const STRINGS = ['Hi,', `I'm Jock,`, 'web developer.'];
 
@@ -37,7 +36,7 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-        <WaveEffect />
+        {/* <WaveEffect /> */}
       </div>
       <Loader type="pacman" />
     </>
