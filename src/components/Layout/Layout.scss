@@ -114,3 +114,12 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    margin-left: 50px;
+    .text-zone {
+      width: 70%;
+    }
+  }
+}

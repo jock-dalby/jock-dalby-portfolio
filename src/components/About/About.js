@@ -1,3 +1,5 @@
+import './About.scss';
+
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import SkillsCube from './SkillsCube/SkillsCube';
 import { Loader } from 'react-loaders';
@@ -23,7 +25,9 @@ const About = () => {
             fitness enthusiast, and tech-obsessed!!!
           </p>
         </div>
-        <SkillsCube />
+        <div className="skills-cube-container">
+          <SkillsCube />
+        </div>
       </div>
       <Loader type="pacman" />
     </>
