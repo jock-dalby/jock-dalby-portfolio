@@ -37,9 +37,9 @@ const Contact = () => {
         <div className="text-zone">
           <AnimatedLetters delay={3000} str="Contact me" idx={15} />
           <p>
-            I am interested in freelance opportunities - especially on ambitious
-            or large projects. However, if you have any other requests or
-            questions, don't hesitate to contact me using below form either.
+            I am interested in discussing any Frontend JS developer
+            opportunities. However, if you have any other requests or questions,
+            don't hesitate to contact me using the form below.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>

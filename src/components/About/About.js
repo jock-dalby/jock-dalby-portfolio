@@ -11,18 +11,18 @@ const About = () => {
         <div className="text-zone">
           <AnimatedLetters delay={3000} str={'About me'} idx={15} />
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established digital agency with the opportunity to work with the
-            latest technologies on challenging and diverse projects.
+            I'm an ambitious frontend developer, who loves to dive into
+            challenging and diverse projects that let me work with the latest
+            and greatest technologies.
           </p>
           <p>
-            I'm quite confident, naturally curious, and perpetually working on
-            improving my skillset.
+            I'm social, naturally curious and always looking for ways to improve
+            my skillset.
           </p>
           <p>
             If I need to define myself in one sentence that would be a family
             person, father of two beautiful children, a football fanatic,
-            fitness enthusiast, and tech-obsessed!!!
+            fitness enthusiast, and love all things tech!
           </p>
         </div>
         <div className="skills-cube-container">
